@@ -4,8 +4,8 @@ prevNextIcon = document.querySelectorAll(".icons span");
 
 // getting new date, current year and month
 let date = new Date(),
-currYear = date.getFullYear(),
-currMonth = date.getMonth();
+    currYear = date.getFullYear(),
+    currMonth = date.getMonth();
 
 const months = [
 
@@ -18,9 +18,9 @@ const months = [
 const renderCalendar = () => {
 
     let firstDayOfMonth = new Date(currYear, currMonth, 1).getDay(), // getting first date of the month 
-    lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of the month
-    lastDayOfMonth = new Date(currYear, currMonth, lastDateOfMonth).getDay(), // getting last day of the month  
-    lastDateOfTheLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+        lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of the month
+        lastDayOfMonth = new Date(currYear, currMonth, lastDateOfMonth).getDay(), // getting last day of the month  
+        lastDateOfTheLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
     let liTag = "";
 
     for (let i = firstDayOfMonth; i > 0; i--) { // creating li of previous month last days
