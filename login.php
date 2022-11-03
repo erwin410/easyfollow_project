@@ -1,3 +1,7 @@
+<?php
+//connection a la base de donnée 
+include('fonctions.php');
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,24 +16,39 @@
 
 </head>
 <body>
+    <?php
+    var_dump($stmt);
+    ?>
+
     <div class="flex">
         <h1 class="Login">Connexion</h1>
-        <form class="Nom"action="">
+    
+        
+            
+         
+        <form class="Nom" action="login.php" method="post">
+            <?php if(isset($errorMessage)) : ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo $errorMessage; ?>
+        </div>
+        <?php endif; ?>
             <label for="">Mail</label>
-            <input name="Mail"placeholder="Entrer votre email" type="email">
+            <input id="email" name="Mail"placeholder="Entrer votre email" type="email">
             <label for="">Mot de passe</label>
-            <input name="Mot de passe"placeholder="Entrer votre mot de passe" type="password">
+            <input id="password" name="Mot de passe"placeholder="Entrer votre mot de passe" type="password">
             <a href="#"></a>
             
             
             <div class="bouton">
-                <button class="mdl-button mdl-js-button mdl-button--raised"> Connexion
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised"> Connexion
                     
                     
             </div>    
+
                 
+
             
-                
+        
             
             
             
@@ -37,6 +56,8 @@
     
         
         </form>
+        
+  
 
     </div>
     
